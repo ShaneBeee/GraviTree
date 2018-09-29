@@ -1,6 +1,7 @@
 name: GraviTree
 main: me.ryanhamshire.GraviTree.GraviTree
-version: 2.7.2
+version: 3.0
+api-version: 1.13
 commands:
    treesfall:
       description: Toggles tree blocks falling when a tree is chopped.
