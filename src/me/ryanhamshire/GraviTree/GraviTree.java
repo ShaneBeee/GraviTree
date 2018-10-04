@@ -314,7 +314,10 @@ public class GraviTree extends JavaPlugin implements Listener
     private static boolean blockIsLog(Block block)
     {
         Material type = block.getType();
-        if(type == Material.OAK_LOG || type == Material.SPRUCE_LOG || type == Material.JUNGLE_LOG || type == Material.BIRCH_LOG || type == Material.DARK_OAK_LOG || type == Material.ACACIA_LOG)
+        if(type == Material.OAK_LOG || type == Material.SPRUCE_LOG || type == Material.JUNGLE_LOG ||
+                type == Material.BIRCH_LOG || type == Material.DARK_OAK_LOG || type == Material.ACACIA_LOG ||
+                type == Material.OAK_WOOD || type == Material.SPRUCE_WOOD || type == Material.JUNGLE_WOOD ||
+                type == Material.BIRCH_WOOD || type == Material.DARK_OAK_WOOD || type == Material.ACACIA_WOOD)
         {
             return true;
         }
