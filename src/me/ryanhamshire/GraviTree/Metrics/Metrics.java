@@ -1,6 +1,5 @@
 package me.ryanhamshire.GraviTree.Metrics;
 
-
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
