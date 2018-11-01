@@ -1,6 +1,6 @@
 name: GraviTree
 main: me.ryanhamshire.GraviTree.GraviTree
-version: 3.2.0
+version: 3.2.1
 authors: [Big_Scary, ShaneBee]
 api-version: 1.13
 commands:
