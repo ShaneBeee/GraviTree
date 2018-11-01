@@ -6,9 +6,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.Callable;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.logging.Logger;
 
+import me.ryanhamshire.GraviTree.Metrics.Metrics;
 import org.bukkit.*;
 import org.bukkit.World.Environment;
 import org.bukkit.block.Block;
@@ -57,6 +59,7 @@ public class GraviTree extends JavaPlugin implements Listener
 	public void onEnable()
 	{ 		
 		GraviTree.instance = this;
+        Metrics metrics = new Metrics(this);
 		
         //read configuration settings (note defaults)
         this.getDataFolder().mkdirs();
@@ -107,6 +110,21 @@ public class GraviTree extends JavaPlugin implements Listener
         {
             PlayerData.Preload(player);
         }
+
+        metrics.addCustomChart(new Metrics.SimplePie("Enabled_in_nether", new Callable<String>() {
+            @Override
+            public String call() throws Exception {
+                return Boolean.toString(config_chopInNether);
+            }
+        }));
+
+        metrics.addCustomChart(new Metrics.SimplePie("Enabled_in_the_end", new Callable<String>() {
+            @Override
+            public String call() throws Exception {
+                return Boolean.toString(config_chopInEnd);
+            }
+        }));
+
 	}
 	
 	public void onDisable()
