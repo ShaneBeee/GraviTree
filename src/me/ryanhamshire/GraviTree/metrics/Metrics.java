@@ -1,4 +1,4 @@
-package me.ryanhamshire.GraviTree.metrics;
+package me.ryanhamshire.GraviTree.Metrics;
 
 
 import org.bukkit.Bukkit;

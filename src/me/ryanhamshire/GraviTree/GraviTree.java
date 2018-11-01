@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.logging.Logger;
 
-import me.ryanhamshire.GraviTree.metrics.Metrics;
+import me.ryanhamshire.GraviTree.Metrics.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
