@@ -12,6 +12,9 @@ commands:
     usage: /gravitree reload
     permission: gravitree.reload
 permissions:
-    gravitree.chop:
-        description: Grants permission to apply gravity to chopped trees.
-        default: op
+  gravitree.chop:
+    description: Grants permission to apply gravity to chopped trees.
+    default: op
+  gravitree.reload:
+    description: Grants permission to reload config
+    default: op
