@@ -52,8 +52,9 @@ public class GraviTree extends JavaPlugin implements Listener
     private String config_chopOff;
     private boolean config_canDisable;
     boolean config_chopModeOnByDefault;
-    boolean config_chopInNether;
-    boolean config_chopInEnd;
+    private boolean config_chopInNether;
+    private boolean config_chopInEnd;
+    private int config_maxradius;
 	
 	//initializes well...   everything
 	public void onEnable()
@@ -90,6 +91,11 @@ public class GraviTree extends JavaPlugin implements Listener
         
         this.config_canDisable = config.getBoolean("Players Can Disable", true);
         outConfig.set("Players Can Disable", this.config_canDisable);
+
+        this.config_maxradius = config.getInt("Max tree felling distance", 20);
+        outConfig.set("Max tree felling distance", this.config_maxradius);
+
+
         
         try
         {
@@ -294,6 +300,8 @@ public class GraviTree extends JavaPlugin implements Listener
         if(!this.blockIsTreeTopper(aboveBlock)) return;
         
         int radius = 20;
+        if(this.config_maxradius >= 1) radius = this.config_maxradius;
+
         if(brokenBlock.getType() == Material.DARK_OAK_LOG)
         {
             radius = 2;
