@@ -1,6 +1,6 @@
 name: GraviTree
 main: me.ryanhamshire.GraviTree.GraviTree
-version: 3.4.0
+version: 3.4.1[Legacy]
 authors: [Big_Scary, ShaneBee]
 commands:
   treesfall:
